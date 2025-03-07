@@ -39,7 +39,7 @@ This github provides getting started guide and other working details for Rainy U
 
 ### Interfacing Details
 
-- When Rainy UHF shield mounted on Ardi-32,
+- When Rainy UHF shield mounted on [Ardi-32](https://shop.sb-components.co.uk/products/ardi32-uno-r3-alternative-board-based-on-esp32-s3-wroom),
 
   <img src="https://github.com/sbcshop/Rainy_UHF_Shield_Software/blob/main/images/Rainy_UHF_Shield_withArdi-32.jpg">
 
@@ -57,8 +57,23 @@ This github provides getting started guide and other working details for Rainy U
   | IO12 | TFT_CLK | Serial Clock pin of SPI |
   | IO14 | TFT_BL | Backlight of display |
 
+- Similarly, when Rainy UHF Shield mounted on [ArdiPi](https://shop.sb-components.co.uk/products/ardipi-uno-r3-alternative-board-based-on-pico-w),
 
-- When Rainy UHF shield mounted on Arduino Uno, for uploading Code in UNO you will have to remove this UHF shield as it is using Hardware serial pin.
+  |Ardi-Pi | Rainy UHF shield | Function |
+  |---|---|---|
+  | GP1/UART0 RX | UHF TXD | Serial UART Communication Pin |
+  | GP0/UART0 TX | UHF RXD | Serial UART Communication Pin |
+  | GP11 | UHF EN | UHF Enable pin, HIGH - enable and LOW - disable |  
+  | GP3 | BUZ | Buzzer +ve Pin |
+  | GP4 | LED | User LED |
+  | GP15 | TFT_RST | Display Reset Pin for SPI |
+  | GP14 | TFT_DC | Data/Command Pin of SPI |
+  | GP17 | TFT_CS | Display Chip Select for SPI |
+  | GP19 | TFT_MOSI | MOSI(Master OUT Slave IN) Pin of SPI  |
+  | GP18 | TFT_CLK | Serial Clock pin of SPI |
+  | GP10 | TFT_BL | Backlight of display |
+  
+- When Rainy UHF shield mounted on Arduino Uno*, 
   
   <img src="https://github.com/sbcshop/Rainy_UHF_Shield_Software/blob/main/images/RainyUHFShield_withUNO.jpg">
 
@@ -76,7 +91,8 @@ This github provides getting started guide and other working details for Rainy U
   | D13 | TFT_CLK | Serial Clock pin of SPI |
   | D7 | TFT_BL | Backlight of display |
 
-
+  ***NOTE: While Uploading code in Arduino UNO you will have to REMOVE this UHF shield as it is using HARDWARE SERIAL PIN.**
+  
 ### 2. Installing Libraries
    - When compiling sample codes there are some dependency on external libraries sometime which you can add as shown here.
    - For example installing library, for display select Sketch > Include Library > Manage Libraries. We need ST7789 (1.10.3 version) and GFX library (1.11.7 version) for 1.14" TFT Display,
